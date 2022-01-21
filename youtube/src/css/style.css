@@ -1,0 +1,66 @@
+.rb_video_container {
+    position: fixed;
+    border-radius: 20px;
+    left: 20px;
+    bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 40%);
+    outline: 3px solid white;
+    transition-duration: 0.5s;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.rb_video_btn {
+    position: absolute;
+    z-index: 1003;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #df0000;
+    color: white;
+    padding: 15px 0;
+    transition-duration: 0.5s;
+}
+
+.rb_video_btn:hover {
+    transform: scale(1.1);
+}
+
+.rb_video_container:not(.active):hover {
+    outline-color: #df0000;
+    bottom: 35px;
+}
+
+.rb_video_container.active {
+    outline-color: #df0000;
+    transform: scale(1.5);
+    transform-origin: 0 100%;
+    bottom: 35px;
+}
+
+.rb_video_container .rb_video_close,
+.rb_video_container .rb_video_collapse {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    top: 7px;
+    right: 7px;
+    transition-duration: 0.5s;
+    color: #df0000;
+    font-size: 20px;
+    z-index: 1003;
+    cursor: pointer;
+}
+
+.rb_video_container:hover .rb_video_close,
+.rb_video_container:hover .rb_video_collapse {
+    opacity: 1;
+}
+
+.rb_video_container .rb_video_close:hover,
+.rb_video_container .rb_video_collapse:hover {
+    transform: scale(1.1);
+}
